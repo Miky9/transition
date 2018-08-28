@@ -1,0 +1,17 @@
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        var values = new Dictionary<string, string>();
+        values.Add("A", "uppercase letter A");
+        values.Add("c", "lowercase letter C");
+
+        // Use inline "out string" with TryGetValue.
+        if (values.TryGetValue("c", out string description))
+        {
+            System.Console.WriteLine(description);
+        }
+    }
+}
